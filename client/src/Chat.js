@@ -27,7 +27,6 @@ function Chat({ socket, username, room }) {
   //useEffect function is going to listen whenever there are any changes
 
   useEffect(() => {
-    //basically this function is going to be called whenever there is a change in our socket server
     socket.on("receive_message", (data) => {
       //whenever we receive a message, we're going to grab the current previous message list and we're going to add the new message that we just received
       setMessageList((list) => [...list, data]);
